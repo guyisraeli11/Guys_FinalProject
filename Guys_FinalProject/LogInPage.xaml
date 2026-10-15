@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Guys_FinalProject.LogInPage"
+    Title="Login">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="12"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            MaximumWidthRequest="500">
+
+            <Label Text="Login"
+                   FontSize="26"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,15" />
+
+            <Label Text="Enter your E-mail"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="EmailEntry"
+                   Placeholder="E-mail"
+                   Keyboard="Email"
+                   WidthRequest="280" />
+
+            <Label Text="Enter your Password"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Password"
+                   IsPassword="True"
+                   WidthRequest="280" />
+
+            <Label Text="CAPtChA"
+                   FontSize="18"
+                   FontAttributes="Italic"
+                   TextColor="Gray"
+                   BackgroundColor="#EEEEEE"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   WidthRequest="120"
+                   Padding="8,4" />
+
+            <Entry x:Name="CaptchaEntry"
+                   Placeholder="Enter CAPTCHA"
+                   WidthRequest="280" />
+
+            <Label x:Name="MessageLabel"
+                   Text=""
+                   TextColor="Red"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Login"
+                    WidthRequest="140"
+                    HorizontalOptions="Center"
+                    Clicked="OnLoginClicked" />
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="5">
+
+                <Label Text="Don't have an account?"
+                       TextColor="#00CFC1"
+                       VerticalTextAlignment="Center" />
+
+                <Button Text="Sign Up"
+                        BackgroundColor="Transparent"
+                        TextColor="#1683E8"
+                        Padding="5,0"
+                        Clicked="OnGoToRegisterClicked" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

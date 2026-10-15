@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Guys_FinalProject.Register"
+    Title="Register">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="8"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            MaximumWidthRequest="500">
+
+            <Label Text="Sign up"
+                   FontSize="26"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,10" />
+
+            <Label Text="Enter your Full Name"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="FullNameEntry"
+                   Placeholder="Full Name"
+                   WidthRequest="300" />
+
+            <Label Text="Enter your UserName"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="UsernameEntry"
+                   Placeholder="Username"
+                   WidthRequest="300" />
+
+            <Label Text="Enter your E-mail"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="EmailEntry"
+                   Placeholder="E-mail"
+                   Keyboard="Email"
+                   WidthRequest="300" />
+
+            <Label Text="Enter your E-mail Password"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Password"
+                   IsPassword="True"
+                   WidthRequest="300" />
+
+            <Label Text="RE-enter your E-mail Password"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="ConfirmPasswordEntry"
+                   Placeholder="Re-enter password"
+                   IsPassword="True"
+                   WidthRequest="300" />
+
+            <Label Text="CAPtChA"
+                   FontSize="18"
+                   FontAttributes="Italic"
+                   TextColor="Gray"
+                   BackgroundColor="#EEEEEE"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   WidthRequest="120"
+                   Padding="8,4" />
+
+            <Entry x:Name="CaptchaEntry"
+                   Placeholder="Enter CAPTCHA"
+                   WidthRequest="300" />
+
+            <Label x:Name="MessageLabel"
+                   Text=""
+                   TextColor="Red"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Sign Up"
+                    WidthRequest="140"
+                    HorizontalOptions="Center"
+                    Clicked="OnSignUpClicked" />
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="5">
+
+                <Label Text="Already have an account?"
+                       TextColor="#00CFC1"
+                       VerticalTextAlignment="Center" />
+
+                <Button Text="Login"
+                        BackgroundColor="Transparent"
+                        TextColor="#1683E8"
+                        Padding="5,0"
+                        Clicked="OnGoToLoginClicked" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
