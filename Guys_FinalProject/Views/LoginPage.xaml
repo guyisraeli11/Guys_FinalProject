@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Guys_FinalProject.Views.LoginPage"
+             Title="LoginPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="12"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            MaximumWidthRequest="500">
+
+            <Label Text="Login"
+                
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,15" />
+
+            <Label Text="Enter your E-mail"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="EmailEntry"
+                   Placeholder="E-mail"
+                   Keyboard="Email"
+                   WidthRequest="280" />
+
+            <Label Text="Enter your Password"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Password"
+                   IsPassword="True"
+                   WidthRequest="280" />
+
+
+
+            <Label x:Name="MessageLabel"
+                   Text=""
+                   TextColor="{StaticResource labelError}"
+                   HorizontalTextAlignment="Center" />
+
+            <Button Text="Login" HorizontalOptions="Center" Clicked="OnLoginClicked"  Style="{StaticResource LoginRegisterButton}"/>
+
+            <Button Text="Don't have an account?  Sign Up" Style="{StaticResource ButtonTransparent}" Clicked="OnGoToRegisterClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

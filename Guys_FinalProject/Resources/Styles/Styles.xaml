@@ -3,6 +3,34 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <Style TargetType="Button" x:Key="LoginRegisterButton">
+        <Setter Property="BackgroundColor" Value="Blue" />
+        <Setter Property="FontSize" Value="Large" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="Padding" Value="5,0" />
+        <Setter Property="WidthRequest" Value="400" />
+        <Setter Property="HeightRequest" Value="100" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="ButtonTransparent">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="#1683E8" />
+        <Setter Property="Padding" Value="5,0" />
+    </Style>
+
+    <Style x:Key="labelError" TargetType="Label">
+        <Setter Property="TextColor" Value="DarkRed" />
+    </Style>
+
+    <Style x:Key="entryForm" TargetType="Entry">
+        <Setter Property="WidthRequest" Value="300" />
+    </Style>
+
+
+    
+    
+    
+    
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
     </Style>

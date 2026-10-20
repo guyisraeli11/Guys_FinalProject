@@ -1,17 +1,14 @@
-
 using System.Net.Mail;
 
-namespace Guys_FinalProject;
+namespace Guys_FinalProject.Views;
 
-public partial class Register : ContentPage
+public partial class RegisterPage : ContentPage
 {
-    private const string DemoCaptcha = "CAPtChA";
-
-    public Register()
-    {
-        InitializeComponent();
-    }
-
+  
+    public RegisterPage()
+	{
+		InitializeComponent();
+	}
     private async void OnSignUpClicked(object sender, EventArgs e)
     {
         MessageLabel.TextColor = Colors.Red;
@@ -21,8 +18,8 @@ public partial class Register : ContentPage
             string.IsNullOrWhiteSpace(UsernameEntry.Text) ||
             string.IsNullOrWhiteSpace(EmailEntry.Text) ||
             string.IsNullOrWhiteSpace(PasswordEntry.Text) ||
-            string.IsNullOrWhiteSpace(ConfirmPasswordEntry.Text) ||
-            string.IsNullOrWhiteSpace(CaptchaEntry.Text))
+            string.IsNullOrWhiteSpace(ConfirmPasswordEntry.Text)
+           )
         {
             MessageLabel.Text = "Please fill in all fields.";
             return;
@@ -54,15 +51,7 @@ public partial class Register : ContentPage
             return;
         }
 
-        // Check CAPTCHA
-        if (!string.Equals(
-            CaptchaEntry.Text.Trim(),
-            DemoCaptcha,
-            StringComparison.OrdinalIgnoreCase))
-        {
-            MessageLabel.Text = "CAPTCHA is incorrect.";
-            return;
-        }
+  
 
         // Registration is not connected to a database yet
         MessageLabel.TextColor = Colors.Green;

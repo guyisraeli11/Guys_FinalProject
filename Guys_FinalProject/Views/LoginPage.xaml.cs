@@ -1,24 +1,20 @@
-
 using System.Net.Mail;
 
-namespace Guys_FinalProject;
+namespace Guys_FinalProject.Views;
 
-public partial class LogInPage : ContentPage
+public partial class LoginPage : ContentPage
 {
-    private const string DemoCaptcha = "CAPtChA";
-
-    public LogInPage()
+    public LoginPage()
     {
         InitializeComponent();
     }
-
     private async void OnLoginClicked(object sender, EventArgs e)
     {
         MessageLabel.TextColor = Colors.Red;
 
         if (string.IsNullOrWhiteSpace(EmailEntry.Text) ||
-            string.IsNullOrWhiteSpace(PasswordEntry.Text) ||
-            string.IsNullOrWhiteSpace(CaptchaEntry.Text))
+            string.IsNullOrWhiteSpace(PasswordEntry.Text))
+
         {
             MessageLabel.Text = "Please fill in all fields.";
             return;
@@ -34,14 +30,7 @@ public partial class LogInPage : ContentPage
             return;
         }
 
-        if (!string.Equals(
-            CaptchaEntry.Text.Trim(),
-            DemoCaptcha,
-            StringComparison.OrdinalIgnoreCase))
-        {
-            MessageLabel.Text = "CAPTCHA is incorrect.";
-            return;
-        }
+
 
         await DisplayAlert(
             "Login",
@@ -52,6 +41,6 @@ public partial class LogInPage : ContentPage
     private async void OnGoToRegisterClicked(
         object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Register());
+        await Navigation.PushAsync(new RegisterPage());
     }
 }
